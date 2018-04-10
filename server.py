@@ -25,12 +25,15 @@ s.listen(5)
 while True:
   c, addr = s.accept()
   print 'Got connection from', addr, '.'
-  text =  c.recv(1024)
-  print 'Received message : ', text
-  with open('./uploads/file_'+str(incoming)+'.txt','w') as file:
-    file.write(text+'\n')
-  file.close()
-  c.send('Thanks for connecting.')
+  with open('./uploads/file_'+str(incoming),'wb') as f:
+    while True:
+      print 'Receiving data ...'
+      data =  c.recv(1024)
+      if not data:
+        break
+      f.write(data)
+  f.close()
+  print 'Done file transfer job.'
   c.close()
   print 'Connection ended.'
   incoming += 1

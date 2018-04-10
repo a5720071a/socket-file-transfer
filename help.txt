@@ -1,0 +1,7 @@
+How to use
+
+  SERVER
+    python2.7 server.py --port=<port>
+
+  CLIENT
+    python2.7 client.py --port=<port> [message]

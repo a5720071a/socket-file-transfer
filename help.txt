@@ -1,7 +1,9 @@
 How to use
 
   SERVER
-    python2.7 server.py --port=<port>
+    python2.7 server.py --port=<port> #server receive file
+    python2.7 tcp_server.py #server serve file
 
   CLIENT
-    python2.7 client.py --port=<port> [filename]
+    python2.7 client.py --port=<port> [filename] #client send file
+    python2.7 tcp_client.py #client receive file

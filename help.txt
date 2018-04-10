@@ -7,3 +7,7 @@ How to use
   CLIENT
     python2.7 client.py --port=<port> [filename] #client send file
     python2.7 tcp_client.py #client receive file
+
+  AWS
+    add inbound rules for port you want to use
+    set public ipv4 of ec2 on client
